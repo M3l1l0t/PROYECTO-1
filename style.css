@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:900,400,300,100,700,500" rel="stylesheet" type="text/css');
+:root {
+  --rtc-color-1: #5601f3;
+  --rtc--color-2: #ffffff;
+  --rtc-color-3: #4ede34;
+  --rtc--color-4: #fb80f7;
+  --rtc--color-5: #ffae5d;
+  --rtc-color-6: #0bf29e;
+  --rtc-color-7: #08a600;
+  --rtc-color-8: #ffff00;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto';
+}
+.grid-container {
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+header.grid-container {
+  grid-template-columns: 200px 100px 1fr;
+  grid-auto-rows: auto;
+  padding: 20px;
+  gap: 50px;
+  justify-items: end;
+}
+.logo {
+  width: 100%;
+  object-fit: contain;
+}
+.menu {
+  display: none;
+  cursor: pointer;
+  width: 30px;
+}
+.list {
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  font-size: 15px;
+  gap: 20px;
+  list-style: none;
+}
+.buscador {
+  grid-column: 1/2;
+  width: 100%;
+}
+.opiniones {
+  grid-column: 3/4;
+  justify-self: center;
+}
+#kawaii {
+  background-image:url(./assets/34508413e8c47f823dea8b814da591651a457f19_kawaii\).jpg);
+  background-size: cover;
+  grid-template-columns: 1fr;
+  gap:5px;
+  padding-top: 10px;
+}
+#kawaii > h2 {
+  font-size:xx-large;
+}
+#kawaii  > button {
+  cursor: pointer;
+  background-color: var(--rtc-color-7);
+  color: var(--rtc--color-2);
+  padding: 5px;
+  opacity: 0.8;
+  transition: 0.3s;}
+  #kawaii  > button:hover 
+  {opacity: 1}
+  #originales, #ofertas, #novedades {
+    padding-top: 30px;
+  }
+.originales {
+  padding-top: 30px;
+  width: 70%;
+  margin: auto;
+  grid-template-columns: repeat(3, 1fr);
+}
+.originales > img {
+  width: 80%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.ofertas{
+  width: 70%;
+  margin: auto;
+  grid-template-columns: repeat(3, 1fr);
+}
+.ofertas > img {
+  width: 80%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.descuento {
+  text-decoration: line-through;
+}
+.novedades{
+  width: 70%;
+  margin: auto;
+  grid-template-columns: repeat(3, 1fr);
+}
+.novedades > img {
+  width: 80%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;}
+  #figuras {
+    background-image:url(./assets/novedades.jpg);
+    background-size: cover;
+    grid-template-columns: 1fr;
+    gap:5px;
+  padding-top: 10px;
+}
+    #figuras > h2 {
+  font-size:xx-large;
+  color: var(--rtc-color-8);
+}
+#figuras > h4 {
+  color: var(--rtc-color-8);
+  font-size:large;
+}
+    
+    #figuras > button {
+      cursor: pointer;
+      background-color: var(--rtc--color-4);
+      color: var(--rtc--color-2);
+      padding: 5px;
+      opacity: 0.8;
+      transition: 0.3s;}
+
+      #figuras > button:hover 
+      {opacity: 1}
+      footer{
+        background-color: var(--rtc-color-6);
+        padding-top: 15px;
+        padding-bottom: 10px;
+      }
+      footer > form > label {
+        font-weight: bold;
+        padding: 10px;
+      }
+      @media (max-width: 775px) {
+        header.grid-container {
+          grid-template-columns: 2fr;
+        }
+        .menu {
+          display: block;
+          width: 80px;
+          object-fit: contain;
+          justify-self: center;
+          grid-column: 2/3;
+        }
+        .logo {
+          width: 80px;
+          object-fit: contain;
+          justify-self: center;
+        }
+        .buscador,
+        .telefono,
+        .opiniones,
+        .list {
+          display: none;
+        }
+      }
+      @media (max-width: 870px) {
+        .originales, .ofertas, .novedades {
+          grid-template-columns: 1fr;
+      
+        }
+
+      }
+      
+    
